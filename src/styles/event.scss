@@ -1,0 +1,55 @@
+@import 'mixins.scss';
+
+.event {
+  &__inner {
+  }
+
+  &__title {
+    max-width: 530px;
+
+    margin-bottom: 48px;
+
+    @include media-down(tablet) {
+      margin-bottom: 32px;
+
+      max-width: none;
+    }
+  }
+
+  &__tx {
+    max-width: 390px;
+
+    @include media-down(tablet) {
+      max-width: none;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 150px;
+    left: 758px;
+
+    width: 865px;
+    height: 1060px;
+  }
+
+  &__icons {
+  }
+
+  &__icon {
+    &--sticks {
+      position: absolute;
+      top: 36px;
+      right: 748px;
+
+      width: 320px;
+      height: 320px;
+    }
+
+    &--location {
+    }
+
+    &--cup {
+    }
+  }
+}

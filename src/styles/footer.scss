@@ -1,0 +1,19 @@
+@import 'mixins.scss';
+
+.footer {
+  &__tx {
+    color: #c5c5c5;
+    font-size: 13px;
+    font-family: 'YS Text';
+    font-weight: 400;
+    line-height: 16px;
+    word-wrap: break-word;
+
+    max-width: 906px;
+
+    @include media-down(tablet) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}

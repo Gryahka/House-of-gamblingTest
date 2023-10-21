@@ -1,0 +1,116 @@
+@import 'mixins.scss';
+
+.aboniment {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 55px;
+
+  overflow: hidden;
+
+  @include media-down(tablet) {
+    grid-template-columns: none;
+  }
+
+  &__title {
+    font-family: 'YS Text';
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 46px;
+    word-wrap: break-word;
+
+    margin-bottom: 34px;
+
+    max-width: 360px;
+
+    @include media-down(tablet) {
+      font-size: 32px;
+      line-height: 32px;
+
+      max-width: none;
+
+      margin-bottom: 22px;
+    }
+  }
+
+  &__tx {
+    font-family: 'YS Text';
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 28px;
+    word-wrap: break-word;
+
+    max-width: 376px;
+
+    @include media-down(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+
+      max-width: none;
+    }
+  }
+
+  &__right {
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 88px;
+      right: 185px;
+
+      width: 320px;
+      height: 267px;
+
+      border-radius: 50%;
+
+      background: rgba(129, 65, 239, 0.29);
+      filter: blur(51px);
+
+      @include media-down(laptop) {
+        top: 99px;
+        right: 5px;
+
+        width: 267px;
+        height: 261px;
+      }
+    }
+
+    @include media-down(tablet) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 2;
+    top: 52px;
+    right: 238px;
+
+    width: 285px;
+    height: 286px;
+
+    @include media-down(laptop) {
+      top: 89px;
+      right: 144px;
+      width: 198px;
+      height: 286px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: -222px;
+    right: -167px;
+
+    width: 860px;
+    height: 852px;
+
+    @include media-down(laptop) {
+      top: -53px;
+      right: -167px;
+      width: 628px;
+      height: 599px;
+    }
+  }
+}

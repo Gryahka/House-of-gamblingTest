@@ -1,0 +1,76 @@
+@import 'mixins.scss';
+
+.saving {
+  position: relative;
+
+  display: flex;
+  gap: 26px;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 45px;
+    left: 35px;
+
+    width: 378px;
+    height: 392px;
+
+    border-radius: 50%;
+
+    background: rgba(129, 65, 239, 0.29);
+    filter: blur(88px);
+
+    @include media-down(laptop) {
+      top: 99px;
+      right: 5px;
+      width: 267px;
+      height: 261px;
+    }
+  }
+
+  @include media-down(tablet) {
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 432px;
+    height: 432px;
+
+    margin-left: -97px;
+
+    padding-left: 16px;
+
+    @include media-down(tablet) {
+      width: 283px;
+      height: 283px;
+
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    max-width: 464px;
+
+    @include media-down(tablet) {
+      gap: 32px;
+
+      max-width: none;
+    }
+  }
+
+  &__btn {
+    max-width: 281px;
+
+    @include media-down(tablet) {
+      max-width: 100%;
+    }
+  }
+}
